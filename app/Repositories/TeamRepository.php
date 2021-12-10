@@ -64,6 +64,7 @@ class TeamRepository implements TeamRepositoryInterface
         }elseif($request->input('color')==="yellow"){$color=4;
         }else{$color=5;
         }
+        
         try{
             $team=Teams::create([
                 'name'=>$request->input('name'),
