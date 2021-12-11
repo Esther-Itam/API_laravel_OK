@@ -16,15 +16,6 @@ class RouteTest extends TestCase
         $response->assertViewHas('message', 'Vous y êtes !');
     }
 
-    public function test_fluent_json()
-    {
-    $response = $this->json('GET', '/account/101');
-
-    $response
-        ->assertJson(fn (AssertableJson $json) =>
-            $json->missing('api_token')
-                 ->etc()
-        );
-    }
+   
 
   }
